@@ -1,1 +1,1 @@
-# tallqvist.dev.2.0
+# tallqvist.dev
