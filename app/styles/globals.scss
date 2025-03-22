@@ -1,0 +1,427 @@
+/* COLORS */
+:root {
+  --text: #FFFFFF;
+  --accent: #81c784;
+  --dark_blue: #101727;
+}
+
+#particles-js {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* FONTS */
+@font-face {
+  font-family: MonsterratRegular;
+  src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: MonsterratBold;
+  src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: MonsterratMedium;
+  src: url('../fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: MonsterratLight;
+  src: url('../fonts/Montserrat/Montserrat-Light.ttf');
+}
+
+/* GENERAL STYLES */
+html {
+  box-sizing: border-box;
+  font-family: 'MonsterratRegular', serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a, a:active, a:focus{
+  outline: none;
+}
+
+/* NAVIGATION STYLES */
+.navigation {
+  position: relative;
+  z-index: 10;
+  padding: 30px 25px 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.navigation .logo {
+  color: var(--text);
+  font-family: 'MonsterratBold', serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.navigation .link-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  list-style: none;
+}
+
+.navigation .link-container li {
+  padding: 10px 20px;
+  color: var(--text);
+}
+
+.navigation .link-container a {
+  color: var(--text);
+  font-family: 'MonsterratBold', serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.navigation .link-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* HEADER STYLES */
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.header:before {
+  content: "";
+  display: block;
+  background: #101a31 linear-gradient(147deg, #101a31, #101a31 25%, #15223c) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.header .content {
+  font-family: 'MonsterratRegular', serif;
+  position: relative;
+  z-index: 10;
+  padding: 200px 25px 150px 25px;
+  color: var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header .content .text {
+  font-size: 50px;
+  letter-spacing: 2px;
+  width: 100%;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.header .content .typewriter {
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+.header .content .typewriter strong {
+  color: var(--accent);
+}
+
+.header .more {
+  position: relative;
+  color: var(--text);
+  padding: 25px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header .more p {
+  font-family: 'MonsterratMedium', serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.header .more span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/chevron-down.svg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  animation: moveUpDown 2s ease-out infinite;
+}
+
+/* MAIN CONTENT STYLES */
+.main-content {
+  background: var(--dark_blue);
+}
+
+.main-content .content {
+  padding: 60px 25px 80px 25px;
+  color: var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.main-content .column {
+  width: 25%;
+}
+
+.main-content .column.skills {
+  width: 40%;
+}
+
+.main-content .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-content .skills-left {
+  border-right: 1px solid #696969;
+}
+
+.main-content .skills-left,
+.main-content .skills-right {
+  width: 47%;
+}
+
+.skills-container h3 {
+  font-family: 'MonsterratBold', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.skills-container .skill {
+  font-family: 'MonsterratBold', serif;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.skills-container .skill span {
+  font-family: 'MonsterratRegular', serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.main-content h2 {
+  font-family: 'MonsterratMedium', serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.main-content h2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  width: 20px;
+  height: 20px;
+  background: url('../images/chevron-down.svg') no-repeat;
+  background-size: cover;
+}
+
+.main-content p {
+  font-family: 'MonsterratRegular', serif;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.main-content a {
+  font-family: 'MonsterratMedium', serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.main-content b {
+  font-family: 'MonsterratMedium', serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--accent);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1500px) {
+
+  .main-content .column {
+    width: 22.5%;
+  }
+
+  .main-content .column.skills {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+
+  .main-content .column.skills {
+    width: 47%;
+  }
+
+  .main-content .column.about {
+    width: 47%;
+  }
+
+  .main-content .column.contact {
+    width: 100%;
+    margin-top: 60px;
+  }
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1060px) {
+
+  .header {
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .header .content .text {
+    font-size: 32px;
+    letter-spacing: normal;
+    margin-bottom: 5px;
+  }
+
+  .header .content .typewriter {
+    font-size: 24px;
+    letter-spacing: normal;
+  }
+
+  .header .more {
+    padding: 25px 25px 50px 25px;
+  }
+
+  .header .more p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .header .more span {
+    bottom: 25px;
+    animation: none;
+  }
+
+  .main-content .content {
+    padding: 30px 25px;
+  }
+
+  .main-content .column.skills {
+    width: 100%;
+  }
+
+  .main-content .column.about {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .main-content .column.contact {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .main-content .column h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main-content .skills-left,
+  .main-content .skills-right {
+    width: 100%;
+  }
+
+  .main-content .skills-left {
+    margin-bottom: 25px;
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .header {
+    min-height: 60vh;
+  }
+
+  .navigation {
+    flex-wrap: wrap;
+  }
+
+  .navigation .logo {
+    margin-bottom: 10px;
+  }
+
+  .navigation .link-container {
+    justify-content: flex-start;
+  }
+
+  .navigation .link-container li {
+    padding: 10px 25px 10px 0;
+  }
+
+  .header .content {
+    padding: 50px 25px;
+  }
+
+  .header .content .text {
+    font-size: 22px;
+    letter-spacing: normal;
+    margin-bottom: 5px;
+  }
+
+  .header .content .typewriter {
+    font-size: 15px;
+    letter-spacing: normal;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
